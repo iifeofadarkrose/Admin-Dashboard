@@ -1,5 +1,34 @@
 {
-  "node": {},
+  "node": {
+    "5eb9188acfd35f6e7cd34348b6adf81e60e66677": {
+      "workers": {
+        "app/dashboard/users/add/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2FMeryandMossConcepteur%2FDeveloper%2FCode%2FAdmin-Dashboard%2Fapp%2Flib%2Factions.js%22%2C%5B%22addUser%22%2C%22addProduct%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/users/add/page": "rsc"
+      }
+    },
+    "a325d5b22efb2579ab95092eea1ac7f9fb0c24fe": {
+      "workers": {
+        "app/dashboard/users/add/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2FMeryandMossConcepteur%2FDeveloper%2FCode%2FAdmin-Dashboard%2Fapp%2Flib%2Factions.js%22%2C%5B%22addUser%22%2C%22addProduct%22%5D%5D%5D&__client_imported__=!",
+        "app/dashboard/products/add/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2FMeryandMossConcepteur%2FDeveloper%2FCode%2FAdmin-Dashboard%2Fapp%2Flib%2Factions.js%22%2C%5B%22addUser%22%2C%22addProduct%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/users/add/page": "rsc",
+        "app/dashboard/products/add/page": "rsc"
+      }
+    },
+    "0ad6fcc25f613dd4c3c0d142e5738894aee9fc6d": {
+      "workers": {
+        "app/dashboard/users/add/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2FMeryandMossConcepteur%2FDeveloper%2FCode%2FAdmin-Dashboard%2Fapp%2Flib%2Factions.js%22%2C%5B%22addUser%22%2C%22addProduct%22%5D%5D%5D&__client_imported__=!",
+        "app/dashboard/products/add/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2FMeryandMossConcepteur%2FDeveloper%2FCode%2FAdmin-Dashboard%2Fapp%2Flib%2Factions.js%22%2C%5B%22addUser%22%2C%22addProduct%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/dashboard/users/add/page": "rsc",
+        "app/dashboard/products/add/page": "rsc"
+      }
+    }
+  },
   "edge": {},
-  "encryptionKey": "GyHnHUPlYYBIOEbbtWbJqxuMnIw25iRnANXtIscwp8I="
+  "encryptionKey": "p42+A+g1VAMDT/HTNyegDFFYjDglpBEGlv8tEo21UhQ="
 }

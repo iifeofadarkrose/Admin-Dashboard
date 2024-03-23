@@ -2,7 +2,7 @@ import { Product, User } from "./models";
 
 import { connectToDB } from "./utils";
 
-const fetchUsers = async (q,page) => {
+export const fetchUsers = async (q, page) => {
   const regex = new RegExp(q, "i");
   const ITEM_PER_PAGE = 2
   try {
@@ -52,16 +52,16 @@ export const fetchProducts = async (q, page) => {
 
 
 
-// export const fetchProduct = async (id) => {
-//   try {
-//     connectToDB();
-//     const product = await Product.findById(id);
-//     return product;
-//   } catch (err) {
-//     console.log(err);
-//     throw new Error("Failed to fetch product!");
-//   }
-// };
+export const fetchProduct = async (id) => {
+  try {
+    connectToDB();
+    const product = await Product.findById(id);
+    return product;
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch product!");
+  }
+};
 
 // // DUMMY DATA
 
@@ -85,8 +85,3 @@ export const fetchProducts = async (q, page) => {
 //     change: 18,
 //   },
 // ];
-
-export default {
-  fetchUsers,
-  fetchProducts
-};

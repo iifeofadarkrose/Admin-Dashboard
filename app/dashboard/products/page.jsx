@@ -22,7 +22,6 @@ const ProductsPage = async ({ searchParams }) => {
       </div>
       <table className={styles.table}>
         <thead>
-          
           <tr>
             <td>Title</td>
             <td>Description</td>
@@ -33,42 +32,44 @@ const ProductsPage = async ({ searchParams }) => {
           </tr>
         </thead>
         <tbody>
-          {products.map((product)=>(
-          <tr key={product.id}>
-            <td>
-              <div className={styles.user}>
-                <Image src={product.img || "/noproduct.png"}
-                alt=''
-                width={40}
-                height={40}
-                className={styles.userImage}/>
-                {product.title}
-              </div>
-            </td>
-            <td>{product.desc}</td>
-            <td>{product.price}</td>
-            <td>{product.createdAt?.toString().splice(4,16)}</td>
-            <td>{product.stock}</td>
-            <td>
+          {products.map((product) => (
+            <tr key={product.id}>
+              <td>
+                <div className={styles.user}>
+                  <Image
+                    src={product.img || "/noproduct.jpg"}
+                    alt=""
+                    width={40}
+                    height={40}
+                    className={styles.userImage}
+                  />
+                  {product.title}
+                </div>
+              </td>
+              <td>{product.desc}</td>
+              <td>{product.price}</td>
+              <td>{product.createdAt?.toString().slice(4, 16)}</td>
+              <td>{product.stock}</td>
+              <td>
                 <div className={styles.buttons}>
                   <Link href={`/dashboard/products/${product.id}`}>
                     <button className={`${styles.button} ${styles.view}`}>
                       View
                     </button>
                   </Link>
-                    <button className={`${styles.button} ${styles.delete}`}>
-                      Delete
-                    </button>
-               
+                  <button className={`${styles.button} ${styles.delete}`}>
+                    Delete
+                  </button>
                 </div>
               </td>
-          </tr>
+            </tr>
           ))}
         </tbody>
       </table>
-      <Pagination count={count}/>
+      <Pagination count={count} />
     </div>
   );
 };
 
-export default ProductsPage;  
+export default ProductsPage;
+

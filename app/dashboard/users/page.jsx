@@ -3,7 +3,8 @@ import styles from "../../ui/dashboard/users/users.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Pagination from "../../ui/dashboard/pagination/pagination";
-import fetchUsers from "../../lib/data";
+const { fetchUsers } = require("../../lib/data");
+
 
 const UsersPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
@@ -13,7 +14,9 @@ const UsersPage = async ({ searchParams }) => {
     <div className={styles.container}>
       <div className={styles.top}>
         <Search placeholder="Search for a user..." />
-        <button className={styles.addButton}>Add New</button>
+        <Link href="/dashboard/users/add">
+          <button className={styles.addButton}>Add New</button>
+        </Link>
       </div>
       <table className={styles.table}>
         <thead>
