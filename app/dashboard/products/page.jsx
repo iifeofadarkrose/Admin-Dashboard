@@ -3,9 +3,15 @@ import Link from "next/link";
 import styles from "../../ui/dashboard/products/products.module.css";
 import Search from "../../ui/search/search";
 import Pagination from "../../ui/dashboard/pagination/pagination";
+import { fetchProducts } from "../../lib/data";
 
 
-const ProductsPage = async ({ }) => {
+
+const ProductsPage = async ({ searchParams }) => {
+  const q = searchParams?.q || "";
+  const page = searchParams?.page || 1;
+  const { count, products } = await fetchProducts(q, page);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -16,6 +22,7 @@ const ProductsPage = async ({ }) => {
       </div>
       <table className={styles.table}>
         <thead>
+          
           <tr>
             <td>Title</td>
             <td>Description</td>
@@ -26,24 +33,25 @@ const ProductsPage = async ({ }) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          {products.map((product)=>(
+          <tr key={product.id}>
             <td>
               <div className={styles.user}>
-                <Image src='/noavatar.png'
+                <Image src={product.img || "/noproduct.png"}
                 alt=''
                 width={40}
                 height={40}
                 className={styles.userImage}/>
-                Iphone
+                {product.title}
               </div>
             </td>
-            <td>Desc</td>
-            <td>999$</td>
-            <td>13.03.2024</td>
-            <td>99</td>
+            <td>{product.desc}</td>
+            <td>{product.price}</td>
+            <td>{product.createdAt?.toString().splice(4,16)}</td>
+            <td>{product.stock}</td>
             <td>
                 <div className={styles.buttons}>
-                  <Link href="//dashboard/products/test">
+                  <Link href={`/dashboard/products/${product.id}`}>
                     <button className={`${styles.button} ${styles.view}`}>
                       View
                     </button>
@@ -55,11 +63,12 @@ const ProductsPage = async ({ }) => {
                 </div>
               </td>
           </tr>
+          ))}
         </tbody>
       </table>
-      <Pagination/>
+      <Pagination count={count}/>
     </div>
   );
 };
 
-export default ProductsPage;
+export default ProductsPage;  
