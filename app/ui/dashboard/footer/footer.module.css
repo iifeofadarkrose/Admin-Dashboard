@@ -13,3 +13,7 @@
 .text {
   font-size: 12px;
 }
+
+.dev:hover {
+  color: teal;
+}
