@@ -1,16 +1,16 @@
-import Search from "../../ui/search/search";
-import styles from "../../ui/dashboard/users/users.module.css";
+import { deleteUser } from "@/app/lib/actions";
+import { fetchUsers } from "@/app/lib/data";
+import Pagination from "@/app/ui/dashboard/pagination/pagination";
+import Search from "@/app/ui/dashboard/search/search";
+import styles from "@/app/ui/dashboard/users/users.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Pagination from "../../ui/dashboard/pagination/pagination";
-const { fetchUsers } = require("../../lib/data");
-import { deleteUser } from "../../lib/actions";
-
 
 const UsersPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
   const { count, users } = await fetchUsers(q, page);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -57,7 +57,7 @@ const UsersPage = async ({ searchParams }) => {
                     </button>
                   </Link>
                   <form action={deleteUser}>
-                    <input type="hidden" name="id" value={user.id} />
+                    <input type="hidden" name="id" value={(user.id)} />
                     <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>
@@ -72,4 +72,5 @@ const UsersPage = async ({ searchParams }) => {
     </div>
   );
 };
+
 export default UsersPage;

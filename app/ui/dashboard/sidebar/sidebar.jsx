@@ -13,7 +13,7 @@ import {
   MdHelpCenter,
   MdLogout,
 } from "react-icons/md";
-import { auth, signOut } from "../../../auth";
+import { auth, signOut } from "@/app/auth";
 
 const menuItems = [
   {

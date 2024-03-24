@@ -1,7 +1,6 @@
-// import { updateProduct } from "@/app/lib/actions";
-import { fetchProduct } from "../../../lib/data";
-import { updateProduct} from "../../../lib/actions";
-import styles from "../../../ui/dashboard/products/singleProduct/singleProduct.module.css";
+import { updateProduct } from "@/app/lib/actions";
+import { fetchProduct } from "@/app/lib/data";
+import styles from "@/app/ui/dashboard/products/singleProduct/singleProduct.module.css";
 import Image from "next/image";
 
 const SingleProductPage = async ({ params }) => {
@@ -55,4 +54,5 @@ const SingleProductPage = async ({ params }) => {
     </div>
   );
 };
+
 export default SingleProductPage;
