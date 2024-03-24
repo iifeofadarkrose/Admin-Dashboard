@@ -88,7 +88,7 @@ function __build_action__(action, args) {
   return (0,next_dist_client_app_call_server__WEBPACK_IMPORTED_MODULE_0__.callServer)(action.$$id, args)
 }
 
-/* __next_internal_action_entry_do_not_use__ {"226031f7b7862971a1949d363dd7384f84fea35e":"deleteUser","a325d5b22efb2579ab95092eea1ac7f9fb0c24fe":"addUser","014452f7ea1843bededc1744e5a4ca6d8dd59f5a":"deleteProduct","235934e66bfd3b522ac0232bef2061e023e96be0":"updateUser","20ac018f25a34631fd6537e60054de77b0c5fbf2":"authenticate","0ad6fcc25f613dd4c3c0d142e5738894aee9fc6d":"addProduct","424f31014924a1443473008a5b2a1b3de72e713a":"updateProduct"} */ 
+/* __next_internal_action_entry_do_not_use__ {"235934e66bfd3b522ac0232bef2061e023e96be0":"updateUser","a325d5b22efb2579ab95092eea1ac7f9fb0c24fe":"addUser","0ad6fcc25f613dd4c3c0d142e5738894aee9fc6d":"addProduct","424f31014924a1443473008a5b2a1b3de72e713a":"updateProduct","014452f7ea1843bededc1744e5a4ca6d8dd59f5a":"deleteProduct","226031f7b7862971a1949d363dd7384f84fea35e":"deleteUser","20ac018f25a34631fd6537e60054de77b0c5fbf2":"authenticate"} */ 
 
 var addUser = (0,private_next_rsc_action_client_wrapper__WEBPACK_IMPORTED_MODULE_2__.createServerReference)("a325d5b22efb2579ab95092eea1ac7f9fb0c24fe");
 var updateUser = (0,private_next_rsc_action_client_wrapper__WEBPACK_IMPORTED_MODULE_2__.createServerReference)("235934e66bfd3b522ac0232bef2061e023e96be0");
